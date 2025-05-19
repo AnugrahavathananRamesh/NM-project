@@ -1,0 +1,29 @@
+import pandas as pd
+
+# Sample user profiles
+user_profiles = [
+    {"user_id": "user123", "interests": "electronics,gaming", "age": 25},
+    {"user_id": "user456", "interests": "books,fashion", "age": 32},
+    {"user_id": "user789", "interests": "fashion,electronics", "age": 22},
+    {"user_id": "user321", "interests": "books,gaming", "age": 28},
+    {"user_id": "user654", "interests": "technology,books", "age": 35}
+]
+
+# Sample product catalog
+product_catalog = [
+    {"category": "electronics", "products": "Smartphone,Laptop,Headphones,Smartwatch,Tablet"},
+    {"category": "gaming", "products": "PS5,Gaming Mouse,VR Headset,Mechanical Keyboard,Gaming Chair"},
+    {"category": "books", "products": "AI for Beginners,Marketing 101,UX Design,The Lean Startup,Atomic Habits"},
+    {"category": "fashion", "products": "Sneakers,Jackets,T-Shirts,Jeans,Watches"},
+    {"category": "technology", "products": "Smart Home Devices,Drones,3D Printers,AR Glasses,Wireless Routers"}
+]
+
+# Convert to DataFrames
+df_users = pd.DataFrame(user_profiles)
+df_products = pd.DataFrame(product_catalog)
+
+# Save to CSV
+df_users.to_csv("user_profiles.csv", index=False)
+df_products.to_csv("product_catalog.csv", index=False)
+
+print("CSV files created: user_profiles.csv and product_catalog.csv")
